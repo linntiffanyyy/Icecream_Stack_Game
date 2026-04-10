@@ -6,6 +6,7 @@ const playBtn = document.getElementById('playBtn');
 const minimizeBtn = document.getElementById('minimizeBtn');
 const closeBtn = document.getElementById('closeBtn');
 const characterToggleBtn = document.getElementById('characterToggleBtn');
+const jumpBar = document.getElementById('jumpBar');
 
 const scoreEl = document.getElementById('score');
 const highscoreEl = document.getElementById('highscore');
@@ -436,6 +437,13 @@ function isInteractiveTarget(target) {
   return target instanceof Element && !!target.closest('button');
 }
 
+function handleWebTap(e) {
+  if (isInteractiveTarget(e.target)) return;
+  if (!gameScreen.classList.contains('active')) return;
+  e.preventDefault();
+  attemptJump();
+}
+
 // input
 window.addEventListener('keydown', (e) => {
   if (e.code === 'Space') {
@@ -445,14 +453,13 @@ window.addEventListener('keydown', (e) => {
 });
 
 if (document.body.classList.contains('web-mode')) {
-  window.addEventListener('touchstart', (e) => {
-    if (isInteractiveTarget(e.target)) return;
+  jumpBar.addEventListener('touchstart', (e) => {
     e.preventDefault();
     attemptJump();
   }, { passive: false });
 
-  window.addEventListener('click', (e) => {
-    if (isInteractiveTarget(e.target)) return;
+  jumpBar.addEventListener('click', (e) => {
+    e.preventDefault();
     attemptJump();
   });
 }

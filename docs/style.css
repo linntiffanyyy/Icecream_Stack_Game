@@ -29,6 +29,7 @@ html, body {
 
 body.web-mode {
   padding-top: 0;
+  touch-action: manipulation;
 }
 
 /* Titlebar & Window Controls */
@@ -49,6 +50,12 @@ body.web-mode {
 
 body.web-mode #titlebar {
   display: none;
+}
+
+body.web-mode #game-screen,
+body.web-mode #game,
+body.web-mode #home-screen {
+  touch-action: none;
 }
 
 #window-controls button {
@@ -173,6 +180,34 @@ body.web-mode #titlebar {
   display: block;
   margin: 0 auto;
   image-rendering: pixelated;
+}
+
+#jumpBar {
+  display: none;
+}
+
+body.web-mode #jumpBar {
+  display: flex;
+  width: 350px;
+  height: 52px;
+  margin: 10px auto 0;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ff9cc8 0%, #ff6fb2 100%);
+  color: #ffffff;
+  font-family: 'Press Start 2P', cursive, monospace;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #d94b87;
+  -webkit-app-region: no-drag;
+  touch-action: manipulation;
+}
+
+body.web-mode #jumpBar:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #d94b87;
 }
 
 #characterToggleBtn {
