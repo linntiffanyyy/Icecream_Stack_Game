@@ -263,8 +263,19 @@ body.web-mode #game-over {
   padding-top: 68px;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  background: url('./assets/Endscreen.png') center 10px / cover no-repeat;
-  background-color: rgba(0, 0, 0, 0.35);
+  background: url('./assets/Endscreen.png') center 0 / cover no-repeat;
+  background-color: transparent;
+}
+
+body.web-mode #game-over::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
 }
 
 #game-over-card {
@@ -276,6 +287,7 @@ body.web-mode #game-over {
   font-family: 'Press Start 2P', cursive, monospace;
   width: 220px;
   border-radius: 8px;
+  position: relative;
   z-index: 101;
 }
 
@@ -311,6 +323,7 @@ body.web-mode #game-over {
   flex: 0;
   width: 60px;
   height: 35px;
+  z-index: 102;
 }
 
 #yesBtn {
