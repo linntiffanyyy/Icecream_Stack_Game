@@ -28,6 +28,21 @@ if (!window.electronAPI) {
   document.body.classList.add('web-mode');
 }
 
+function updateWebGameScale() {
+  if (!document.body.classList.contains('web-mode')) return;
+  if (window.innerWidth > 640) {
+    document.body.style.setProperty('--game-scale', '1');
+    return;
+  }
+
+  const horizontalPadding = 24;
+  const jumpBarSpace = 92;
+  const availableWidth = Math.max(280, window.innerWidth - horizontalPadding);
+  const availableHeight = Math.max(320, window.innerHeight - jumpBarSpace);
+  const scale = Math.min(availableWidth / 350, availableHeight / 460);
+  document.body.style.setProperty('--game-scale', String(scale));
+}
+
 let score = 0;
 let highscore = localStorage.getItem('highscore') || 0;
 let currentCharacter = 'girl';
@@ -453,6 +468,9 @@ window.addEventListener('keydown', (e) => {
 });
 
 if (document.body.classList.contains('web-mode')) {
+  updateWebGameScale();
+  window.addEventListener('resize', updateWebGameScale);
+
   jumpBar.addEventListener('touchstart', (e) => {
     e.preventDefault();
     attemptJump();

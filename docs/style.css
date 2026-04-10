@@ -30,6 +30,7 @@ html, body {
 body.web-mode {
   padding-top: 0;
   touch-action: manipulation;
+  --game-scale: 1;
 }
 
 /* Titlebar & Window Controls */
@@ -56,6 +57,21 @@ body.web-mode #game-screen,
 body.web-mode #game,
 body.web-mode #home-screen {
   touch-action: none;
+}
+
+body.web-mode .screen {
+  margin: 0;
+}
+
+body.web-mode #home-screen,
+body.web-mode #game-screen {
+  position: fixed;
+  top: calc(50% - 32px);
+  left: 50%;
+  width: 350px;
+  height: 460px;
+  transform: translate(-50%, -50%) scale(var(--game-scale));
+  transform-origin: center center;
 }
 
 #window-controls button {
@@ -190,17 +206,19 @@ body.web-mode #jumpBar {
   display: flex;
   position: fixed;
   left: 50%;
-  top: calc(50% + 276px);
+  bottom: 16px;
   transform: translateX(-50%);
-  width: 350px;
+  width: min(350px, calc(100vw - 24px));
   height: 52px;
   margin: 0;
   border: none;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
   border-radius: 10px;
   background: #ff85c1;
+  background-image: none;
   color: #ffffff;
   font-family: 'Press Start 2P', cursive, monospace;
   font-size: 12px;
@@ -305,7 +323,8 @@ body.web-mode #game-over {
   width: 350px;
   height: 460px;
   padding-top: 58px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(var(--game-scale));
+  transform-origin: center center;
   background: url('./assets/Endscreen.png') center 17px / cover no-repeat;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
