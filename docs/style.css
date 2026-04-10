@@ -252,6 +252,20 @@ body.web-mode #titlebar {
   display: none;
 }
 
+body.web-mode #game-over {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  width: 350px;
+  height: 460px;
+  padding-top: 58px;
+  transform: translateX(-50%);
+  background: url('./assets/Endscreen.png') center 17px / 340px auto no-repeat;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
 #game-over-card {
   background: rgba(255, 160, 170, 0.95);
   border: 3px solid #fff;
@@ -317,4 +331,12 @@ body.web-mode #titlebar {
 #yesBtn:active, #noBtn:active {
   box-shadow: none;
   transform: none;
+}
+
+body.web-mode #yesBtn {
+  bottom: 118px;
+}
+
+body.web-mode #noBtn {
+  bottom: 118px;
 }
