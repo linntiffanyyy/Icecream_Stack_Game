@@ -308,6 +308,7 @@ body.web-mode #jumpBar:active {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   -webkit-app-region: no-drag;
+  position: fixed;
 }
 
 #game-over.hidden {
@@ -327,6 +328,7 @@ body.web-mode #game-over {
   background: url('./assets/Endscreen.png') center 17px / cover no-repeat;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  position: fixed;
 }
 
 #game-over-card {
@@ -338,7 +340,6 @@ body.web-mode #game-over {
   font-family: 'Press Start 2P', cursive, monospace;
   width: 220px;
   border-radius: 8px;
-  position: relative;
   z-index: 101;
 }
 
@@ -379,14 +380,18 @@ body.web-mode #game-over {
 
 #yesBtn {
   position: absolute;
-  bottom: 140px;
-  left: 100px;
+  bottom: 30.5%;
+  left: 28.5%;
+  width: 17.2%;
+  height: 7.6%;
 }
 
 #noBtn {
   position: absolute;
-  bottom: 140px;
-  right: 100px;
+  bottom: 30.5%;
+  right: 28.5%;
+  width: 17.2%;
+  height: 7.6%;
 }
 
 #yesBtn:hover, #noBtn:hover {
