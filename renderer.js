@@ -18,6 +18,15 @@ const ctx = gameCanvas.getContext('2d');
 cloudsCtx.imageSmoothingEnabled = false;
 ctx.imageSmoothingEnabled = false;
 
+const electronAPI = window.electronAPI || {
+  minimize: () => {},
+  close: () => {}
+};
+
+if (!window.electronAPI) {
+  document.body.classList.add('web-mode');
+}
+
 let score = 0;
 let highscore = localStorage.getItem('highscore') || 0;
 let currentCharacter = 'girl';
@@ -53,11 +62,11 @@ images.cone.src = './assets/Cone.png';
 
 // Window controls using exposed API
 minimizeBtn.addEventListener('click', () => {
-  window.electronAPI.minimize();
+  electronAPI.minimize();
 });
 
 closeBtn.addEventListener('click', () => {
-  window.electronAPI.close();
+  electronAPI.close();
 });
 
 function updateCharacterToggleButton() {

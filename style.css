@@ -27,6 +27,10 @@ html, body {
   padding-top: 30px;
 }
 
+body.web-mode {
+  padding-top: 0;
+}
+
 /* Titlebar & Window Controls */
 #titlebar {
   position: fixed;
@@ -41,6 +45,10 @@ html, body {
   padding-right: 8px;
   -webkit-app-region: drag;
   z-index: 10;
+}
+
+body.web-mode #titlebar {
+  display: none;
 }
 
 #window-controls button {
@@ -234,7 +242,7 @@ html, body {
   align-items: flex-start;
   justify-content: center;
   padding-top: 58px;
-  background: url('./assets/endscreen.png') center 17px / cover no-repeat;
+  background: url('./assets/Endscreen.png') center 17px / cover no-repeat;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   -webkit-app-region: no-drag;
