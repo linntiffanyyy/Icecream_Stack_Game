@@ -193,7 +193,7 @@ body.web-mode #jumpBar {
   margin: 10px auto 0;
   border: none;
   border-radius: 10px;
-  background: #ff69b4;
+  background: #ff85c1;
   color: #ffffff;
   font-family: 'Press Start 2P', cursive, monospace;
   font-size: 12px;
@@ -206,7 +206,7 @@ body.web-mode #jumpBar {
 }
 
 body.web-mode #jumpBar:active {
-  background: #ff4f9d;
+  background: #ff85c1;
   transform: none;
   box-shadow: none;
 }
@@ -300,19 +300,11 @@ body.web-mode #game-over {
   transform: translate(-50%, -50%);
   overflow: hidden;
   background: url('./assets/Endscreen.png') center -18px / cover no-repeat;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 body.web-mode #game-over::before {
-  content: "";
-  position: absolute;
-  top: 36px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.35);
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 #game-over-card {
@@ -385,9 +377,45 @@ body.web-mode #game-over::before {
 }
 
 body.web-mode #yesBtn {
-  bottom: 152px;
+  bottom: auto;
+  left: auto;
+  position: static;
+  width: 64px;
+  height: 38px;
+  color: #ff8e97;
+  background: rgba(255, 255, 255, 0.72);
+  border: 2px solid #ff9aa2;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1;
+  pointer-events: auto;
 }
 
 body.web-mode #noBtn {
-  bottom: 152px;
+  bottom: auto;
+  right: auto;
+  position: static;
+  width: 64px;
+  height: 38px;
+  color: #ff8e97;
+  background: rgba(255, 255, 255, 0.72);
+  border: 2px solid #ff9aa2;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1;
+  pointer-events: auto;
+}
+
+body.web-mode #game-over-buttons {
+  margin-top: 118px;
+  gap: 22px;
+}
+
+body.web-mode #yesBtn:hover,
+body.web-mode #noBtn:hover,
+body.web-mode #yesBtn:active,
+body.web-mode #noBtn:active {
+  background: rgba(255, 255, 255, 0.85);
+  transform: none;
+  box-shadow: none;
 }
