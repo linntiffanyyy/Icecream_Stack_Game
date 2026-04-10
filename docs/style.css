@@ -242,7 +242,7 @@ body.web-mode #titlebar {
   align-items: flex-start;
   justify-content: center;
   padding-top: 58px;
-  background: url('./assets/Endscreen.png') center 48px / 350px 460px no-repeat;
+  background: url('./assets/Endscreen.png') center top / 460px 460px no-repeat;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   -webkit-app-region: no-drag;
@@ -262,7 +262,7 @@ body.web-mode #game-over {
   height: 460px;
   padding-top: 58px;
   transform: translate(-50%, -50%);
-  background: url('./assets/Endscreen.png') center 48px / 350px 460px no-repeat;
+  background: url('./assets/Endscreen.png') center top / 460px 460px no-repeat;
   background-color: rgba(0, 0, 0, 0.35);
 }
 
