@@ -1,6 +1,6 @@
 # Scoop Stack
 
-A cute desktop game where you jump on ice cream scoops to build the tallest cone you can.
+A cute desktop game (using electron) where you jump on ice cream scoops to build the tallest cone you can.
 
 ## What It Is
 
