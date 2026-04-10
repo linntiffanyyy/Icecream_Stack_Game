@@ -242,7 +242,7 @@ body.web-mode #titlebar {
   align-items: flex-start;
   justify-content: center;
   padding-top: 58px;
-  background: url('./assets/Endscreen.png') center 6px / 390px auto no-repeat;
+  background: url('./assets/Endscreen.png') center 42px / cover no-repeat;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   -webkit-app-region: no-drag;
@@ -263,7 +263,7 @@ body.web-mode #game-over {
   padding-top: 58px;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  background: url('./assets/Endscreen.png') center 6px / 390px auto no-repeat;
+  background: url('./assets/Endscreen.png') center 42px / cover no-repeat;
   background-color: rgba(0, 0, 0, 0.35);
 }
 
@@ -335,9 +335,9 @@ body.web-mode #game-over {
 }
 
 body.web-mode #yesBtn {
-  bottom: 148px;
+  bottom: 122px;
 }
 
 body.web-mode #noBtn {
-  bottom: 148px;
+  bottom: 122px;
 }
