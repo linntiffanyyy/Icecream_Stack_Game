@@ -27,10 +27,6 @@ html, body {
   padding-top: 30px;
 }
 
-body.web-mode {
-  padding-top: 0;
-}
-
 /* Titlebar & Window Controls */
 #titlebar {
   position: fixed;
@@ -45,10 +41,6 @@ body.web-mode {
   padding-right: 8px;
   -webkit-app-region: drag;
   z-index: 10;
-}
-
-body.web-mode #titlebar {
-  display: none;
 }
 
 #window-controls button {
@@ -242,7 +234,7 @@ body.web-mode #titlebar {
   align-items: flex-start;
   justify-content: center;
   padding-top: 58px;
-  background: url('./assets/Endscreen.png') center 17px / 340px auto no-repeat;
+  background: url('./assets/Endscreen.png') center 17px / cover no-repeat;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   -webkit-app-region: no-drag;
@@ -250,20 +242,6 @@ body.web-mode #titlebar {
 
 #game-over.hidden {
   display: none;
-}
-
-body.web-mode #game-over {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  width: 350px;
-  height: 460px;
-  padding-top: 58px;
-  transform: translateX(-50%);
-  background: url('./assets/Endscreen.png') center 17px / 340px auto no-repeat;
-  background-color: rgba(0, 0, 0, 0.35);
 }
 
 #game-over-card {
@@ -314,13 +292,13 @@ body.web-mode #game-over {
 
 #yesBtn {
   position: absolute;
-  bottom: 150px;
+  bottom: 140px;
   left: 100px;
 }
 
 #noBtn {
   position: absolute;
-  bottom: 150px;
+  bottom: 140px;
   right: 100px;
 }
 
@@ -331,12 +309,4 @@ body.web-mode #game-over {
 #yesBtn:active, #noBtn:active {
   box-shadow: none;
   transform: none;
-}
-
-body.web-mode #yesBtn {
-  bottom: 118px;
-}
-
-body.web-mode #noBtn {
-  bottom: 118px;
 }

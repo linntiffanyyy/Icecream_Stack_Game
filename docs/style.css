@@ -253,15 +253,15 @@ body.web-mode #titlebar {
 }
 
 body.web-mode #game-over {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 50%;
   left: 50%;
   right: auto;
   bottom: auto;
   width: 350px;
   height: 460px;
   padding-top: 58px;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background: url('./assets/Endscreen.png') center 17px / 340px auto no-repeat;
   background-color: rgba(0, 0, 0, 0.35);
 }
@@ -334,9 +334,9 @@ body.web-mode #game-over {
 }
 
 body.web-mode #yesBtn {
-  bottom: 118px;
+  bottom: 132px;
 }
 
 body.web-mode #noBtn {
-  bottom: 118px;
+  bottom: 132px;
 }

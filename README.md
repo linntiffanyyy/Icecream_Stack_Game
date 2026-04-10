@@ -14,5 +14,3 @@ Go to the GitHub Releases section of this repo and download the version made for
 - macOS: download the `.dmg` file if one is available
 
 Then open the downloaded file and install the game.
-
-https://linntiffanyyy.github.io/Icecream_Stack_Game/
