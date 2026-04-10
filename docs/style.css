@@ -242,7 +242,7 @@ body.web-mode #titlebar {
   align-items: flex-start;
   justify-content: center;
   padding-top: 58px;
-  background: url('./assets/Endscreen.png') center 17px / cover no-repeat;
+  background: url('./assets/Endscreen.png') center 17px / contain no-repeat;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   -webkit-app-region: no-drag;
