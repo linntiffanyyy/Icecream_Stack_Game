@@ -242,7 +242,7 @@ body.web-mode #titlebar {
   align-items: flex-start;
   justify-content: center;
   padding-top: 58px;
-  background: url('./assets/Endscreen.png') center 17px / cover no-repeat;
+  background: url('./assets/Endscreen.png') center 17px / 340px auto no-repeat;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   -webkit-app-region: no-drag;
@@ -250,6 +250,20 @@ body.web-mode #titlebar {
 
 #game-over.hidden {
   display: none;
+}
+
+body.web-mode #game-over {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  width: 350px;
+  height: 460px;
+  padding-top: 58px;
+  transform: translateX(-50%);
+  background: url('./assets/Endscreen.png') center 17px / 340px auto no-repeat;
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 #game-over-card {
@@ -300,13 +314,13 @@ body.web-mode #titlebar {
 
 #yesBtn {
   position: absolute;
-  bottom: 140px;
+  bottom: 150px;
   left: 100px;
 }
 
 #noBtn {
   position: absolute;
-  bottom: 140px;
+  bottom: 150px;
   right: 100px;
 }
 
@@ -317,4 +331,12 @@ body.web-mode #titlebar {
 #yesBtn:active, #noBtn:active {
   box-shadow: none;
   transform: none;
+}
+
+body.web-mode #yesBtn {
+  bottom: 118px;
+}
+
+body.web-mode #noBtn {
+  bottom: 118px;
 }
