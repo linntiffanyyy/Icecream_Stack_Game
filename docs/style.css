@@ -188,10 +188,17 @@ body.web-mode #home-screen {
 
 body.web-mode #jumpBar {
   display: flex;
+  position: fixed;
+  left: 50%;
+  top: calc(50% + 276px);
+  transform: translateX(-50%);
   width: 350px;
   height: 52px;
-  margin: 10px auto 0;
+  margin: 0;
   border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
   border-radius: 10px;
   background: #ff85c1;
   color: #ffffff;
@@ -203,11 +210,12 @@ body.web-mode #jumpBar {
   box-shadow: none;
   -webkit-app-region: no-drag;
   touch-action: manipulation;
+  z-index: 90;
 }
 
 body.web-mode #jumpBar:active {
   background: #ff85c1;
-  transform: none;
+  transform: translateX(-50%);
   box-shadow: none;
 }
 
@@ -286,6 +294,21 @@ body.web-mode #jumpBar:active {
 
 #game-over.hidden {
   display: none;
+}
+
+body.web-mode #game-over {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  width: 350px;
+  height: 460px;
+  padding-top: 58px;
+  transform: translate(-50%, -50%);
+  background: url('./assets/Endscreen.png') center 17px / cover no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
 #game-over-card {
