@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kawaii Ice Cream Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="titlebar">
+    <div id="window-controls">
+      <button id="minimizeBtn" title="Minimize">─</button>
+      <button id="closeBtn" title="Close">✕</button>
+    </div>
+  </div>
+
+  <div id="home-screen" class="screen active">
+    <canvas id="clouds" width="350" height="460"></canvas>
+    <div id="home-content">
+      <h1>Scoop Stack!</h1>
+      <p>Press SPACE to jump on scoops!</p>
+      <p>Don't get hit — build the tallest cone!</p>
+      <button id="playBtn"></button>
+    </div>
+  </div>
+
+  <div id="game-screen" class="screen">
+    <canvas id="game" width="350" height="460"></canvas>
+    <button id="characterToggleBtn" title="Switch character" aria-label="Switch character">&#8646;</button>
+    <div id="scoreboard">
+      <div>Score: <span id="score">0</span></div>
+      <div>Highscore: <span id="highscore">0</span></div>
+    </div>
+  </div>
+
+  <div id="game-over" class="hidden">
+    <div id="game-over-card">
+      <h2 id="final-score">Score: 0</h2>
+      <h3 id="new-high">New Highscore!</h3>
+      <div id="game-over-buttons">
+        <button id="yesBtn">YES</button>
+        <button id="noBtn">NO</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
