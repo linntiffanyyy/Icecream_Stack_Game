@@ -32,15 +32,34 @@ function updateWebGameScale() {
   if (!document.body.classList.contains('web-mode')) return;
   if (window.innerWidth > 640) {
     document.body.style.setProperty('--game-scale', '1');
-    return;
+  } else {
+    const horizontalPadding = 24;
+    const jumpBarSpace = 92;
+    const availableWidth = Math.max(280, window.innerWidth - horizontalPadding);
+    const availableHeight = Math.max(320, window.innerHeight - jumpBarSpace);
+    const scale = Math.min(availableWidth / 350, availableHeight / 460);
+    document.body.style.setProperty('--game-scale', String(scale));
   }
 
-  const horizontalPadding = 24;
-  const jumpBarSpace = 92;
-  const availableWidth = Math.max(280, window.innerWidth - horizontalPadding);
-  const availableHeight = Math.max(320, window.innerHeight - jumpBarSpace);
-  const scale = Math.min(availableWidth / 350, availableHeight / 460);
-  document.body.style.setProperty('--game-scale', String(scale));
+  requestAnimationFrame(syncWebLayout);
+}
+
+function syncWebLayout() {
+  if (!document.body.classList.contains('web-mode')) return;
+
+  const referenceScreen = gameScreen.classList.contains('active') ? gameScreen : homeScreen;
+  const rect = referenceScreen.getBoundingClientRect();
+  if (!rect.width || !rect.height) return;
+
+  jumpBar.style.left = `${rect.left}px`;
+  jumpBar.style.top = `${rect.bottom + 10}px`;
+  jumpBar.style.width = `${rect.width}px`;
+  jumpBar.style.display = gameScreen.classList.contains('active') ? 'flex' : 'none';
+
+  gameOverEl.style.left = `${rect.left}px`;
+  gameOverEl.style.top = `${rect.top}px`;
+  gameOverEl.style.width = `${rect.width}px`;
+  gameOverEl.style.height = `${rect.height}px`;
 }
 
 let score = 0;
@@ -106,6 +125,7 @@ updateCharacterToggleButton();
 playBtn.addEventListener('click', () => {
   homeScreen.classList.remove('active');
   gameScreen.classList.add('active');
+  syncWebLayout();
   startGame();
 });
 // --- Game variables and helpers ---
@@ -487,6 +507,7 @@ yesBtn.addEventListener('click', () => {
   gameOverEl.classList.add('hidden');
   resetGameState();
   lastTime = 0;
+  syncWebLayout();
   requestAnimationFrame(gameLoop);
 });
 
@@ -495,11 +516,13 @@ noBtn.addEventListener('click', () => {
   gameScreen.classList.remove('active');
   homeScreen.classList.add('active');
   lastTime = 0;
+  syncWebLayout();
 });
 
 function startGame() {
   gameOverEl.classList.add('hidden');
   resetGameState();
   lastTime = 0;
+  syncWebLayout();
   requestAnimationFrame(gameLoop);
 }

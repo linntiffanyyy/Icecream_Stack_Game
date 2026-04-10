@@ -205,10 +205,10 @@ body.web-mode #game-screen {
 body.web-mode #jumpBar {
   display: flex;
   position: fixed;
-  left: 50%;
-  bottom: 16px;
-  transform: translateX(-50%);
-  width: min(350px, calc(100vw - 24px));
+  left: 0;
+  top: 0;
+  transform: none;
+  width: 350px;
   height: 52px;
   margin: 0;
   border: none;
@@ -233,7 +233,7 @@ body.web-mode #jumpBar {
 
 body.web-mode #jumpBar:active {
   background: #ff85c1;
-  transform: translateX(-50%);
+  transform: none;
   box-shadow: none;
 }
 
@@ -316,15 +316,14 @@ body.web-mode #jumpBar:active {
 
 body.web-mode #game-over {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
   right: auto;
   bottom: auto;
   width: 350px;
   height: 460px;
   padding-top: 58px;
-  transform: translate(-50%, -50%) scale(var(--game-scale));
-  transform-origin: center center;
+  transform: none;
   background: url('./assets/Endscreen.png') center 17px / cover no-repeat;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
