@@ -424,18 +424,29 @@ function showGameOver() {
   gameOverEl.classList.remove('hidden');
 }
 
+function attemptJump() {
+  if (!running) return;
+  if (girl.onGround) {
+    girl.vy = -550;
+    girl.onGround = false;
+  }
+}
+
 // input
 window.addEventListener('keydown', (e) => {
   if (e.code === 'Space') {
     e.preventDefault();
-    if (!running) return;
-    // allow jump if on a surface
-    if (girl.onGround) {
-      girl.vy = -550;
-      girl.onGround = false;
-    }
+    attemptJump();
   }
 });
+
+if (document.body.classList.contains('web-mode')) {
+  window.addEventListener('pointerdown', (e) => {
+    const interactiveTarget = e.target.closest('button');
+    if (interactiveTarget) return;
+    attemptJump();
+  });
+}
 
 yesBtn.addEventListener('click', () => {
   console.log('YES button clicked - restarting game');
