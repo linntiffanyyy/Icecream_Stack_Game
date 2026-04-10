@@ -259,8 +259,8 @@ body.web-mode #game-over {
   right: auto;
   bottom: auto;
   width: 350px;
-  height: 460px;
-  padding-top: 58px;
+  height: 470px;
+  padding-top: 68px;
   transform: translate(-50%, -50%);
   overflow: hidden;
   background: url('./assets/Endscreen.png') center 42px / cover no-repeat;
@@ -335,9 +335,9 @@ body.web-mode #game-over {
 }
 
 body.web-mode #yesBtn {
-  bottom: 122px;
+  bottom: 132px;
 }
 
 body.web-mode #noBtn {
-  bottom: 122px;
+  bottom: 132px;
 }
