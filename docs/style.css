@@ -377,45 +377,43 @@ body.web-mode #game-over::before {
 }
 
 body.web-mode #yesBtn {
-  bottom: auto;
-  left: auto;
-  position: static;
-  width: 64px;
-  height: 38px;
-  color: #ff8e97;
-  background: rgba(255, 255, 255, 0.72);
-  border: 2px solid #ff9aa2;
-  border-radius: 8px;
-  font-size: 11px;
-  line-height: 1;
+  position: absolute;
+  bottom: 132px;
+  left: 100px;
+  width: 60px;
+  height: 35px;
+  color: transparent;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  line-height: normal;
   pointer-events: auto;
 }
 
 body.web-mode #noBtn {
-  bottom: auto;
-  right: auto;
-  position: static;
-  width: 64px;
-  height: 38px;
-  color: #ff8e97;
-  background: rgba(255, 255, 255, 0.72);
-  border: 2px solid #ff9aa2;
-  border-radius: 8px;
-  font-size: 11px;
-  line-height: 1;
+  position: absolute;
+  bottom: 132px;
+  right: 100px;
+  width: 60px;
+  height: 35px;
+  color: transparent;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  line-height: normal;
   pointer-events: auto;
 }
 
 body.web-mode #game-over-buttons {
-  margin-top: 118px;
-  gap: 22px;
+  margin-top: 15px;
+  gap: 15px;
 }
 
 body.web-mode #yesBtn:hover,
 body.web-mode #noBtn:hover,
 body.web-mode #yesBtn:active,
 body.web-mode #noBtn:active {
-  background: rgba(255, 255, 255, 0.85);
+  background: transparent;
   transform: none;
   box-shadow: none;
 }
