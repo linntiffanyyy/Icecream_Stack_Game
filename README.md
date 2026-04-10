@@ -1,36 +1,16 @@
 # Scoop Stack
 
-A cute Electron game where you jump on ice cream scoops to build the tallest cone.
+A cute desktop game where you jump on ice cream scoops to build the tallest cone you can.
 
-## Run locally
+## What It Is
 
-```bash
-npm install
-npm start
-```
+Scoop Stack is a cute stacking game where you jump from scoop to scoop, avoid getting hit, and try to build the tallest ice cream cone possible.
 
-## Build
+## How To Download
 
-```bash
-npm run dist:win
-npm run dist:mac
-```
+Go to the GitHub Releases section of this repo and download the version made for your device.
 
-## Build On Mac
+- Windows: download the `.exe` installer
+- macOS: download the `.dmg` file if one is available
 
-On a Mac, someone can build the macOS app with just:
-
-```bash
-npm install
-npm run dist:mac
-```
-
-The generated macOS installer will appear in the `dist/` folder as a `.dmg` file.
-
-## Release Upload
-
-Upload the built installer files from `dist/` to GitHub Releases:
-
-- Windows: `.exe`
-- macOS: `.dmg`
-
+Then open the downloaded file and install the game.
