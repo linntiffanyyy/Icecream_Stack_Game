@@ -192,22 +192,23 @@ body.web-mode #jumpBar {
   height: 52px;
   margin: 10px auto 0;
   border: none;
-  border-radius: 16px;
-  background: linear-gradient(180deg, #ff9cc8 0%, #ff6fb2 100%);
+  border-radius: 10px;
+  background: #ff69b4;
   color: #ffffff;
   font-family: 'Press Start 2P', cursive, monospace;
   font-size: 12px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 6px 0 #d94b87;
+  box-shadow: none;
   -webkit-app-region: no-drag;
   touch-action: manipulation;
 }
 
 body.web-mode #jumpBar:active {
-  transform: translateY(2px);
-  box-shadow: 0 4px 0 #d94b87;
+  background: #ff4f9d;
+  transform: none;
+  box-shadow: none;
 }
 
 #characterToggleBtn {
@@ -289,27 +290,28 @@ body.web-mode #jumpBar:active {
 
 body.web-mode #game-over {
   position: fixed;
-  top: calc(50% + 22px);
+  top: calc(50% + 8px);
   left: 50%;
   right: auto;
   bottom: auto;
   width: 350px;
   height: 470px;
-  padding-top: 68px;
+  padding-top: 58px;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  background: url('./assets/Endscreen.png') center 0 / cover no-repeat;
+  background: url('./assets/Endscreen.png') center -18px / cover no-repeat;
   background-color: transparent;
 }
 
 body.web-mode #game-over::before {
   content: "";
   position: absolute;
-  top: 24px;
+  top: 36px;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
   z-index: 0;
 }
 
@@ -383,9 +385,9 @@ body.web-mode #game-over::before {
 }
 
 body.web-mode #yesBtn {
-  bottom: 132px;
+  bottom: 152px;
 }
 
 body.web-mode #noBtn {
-  bottom: 132px;
+  bottom: 152px;
 }
