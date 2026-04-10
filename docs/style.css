@@ -288,25 +288,6 @@ body.web-mode #jumpBar:active {
   display: none;
 }
 
-body.web-mode #game-over {
-  position: fixed;
-  top: calc(50% + 8px);
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  width: 350px;
-  height: 470px;
-  padding-top: 58px;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  background: url('./assets/Endscreen.png') center -18px / cover no-repeat;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-body.web-mode #game-over::before {
-  display: none;
-}
-
 #game-over-card {
   background: rgba(255, 160, 170, 0.95);
   border: 3px solid #fff;
@@ -357,13 +338,13 @@ body.web-mode #game-over::before {
 
 #yesBtn {
   position: absolute;
-  bottom: 150px;
+  bottom: 140px;
   left: 100px;
 }
 
 #noBtn {
   position: absolute;
-  bottom: 150px;
+  bottom: 140px;
   right: 100px;
 }
 
@@ -374,46 +355,4 @@ body.web-mode #game-over::before {
 #yesBtn:active, #noBtn:active {
   box-shadow: none;
   transform: none;
-}
-
-body.web-mode #yesBtn {
-  position: absolute;
-  bottom: 132px;
-  left: 100px;
-  width: 60px;
-  height: 35px;
-  color: transparent;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  line-height: normal;
-  pointer-events: auto;
-}
-
-body.web-mode #noBtn {
-  position: absolute;
-  bottom: 132px;
-  right: 100px;
-  width: 60px;
-  height: 35px;
-  color: transparent;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  line-height: normal;
-  pointer-events: auto;
-}
-
-body.web-mode #game-over-buttons {
-  margin-top: 15px;
-  gap: 15px;
-}
-
-body.web-mode #yesBtn:hover,
-body.web-mode #noBtn:hover,
-body.web-mode #yesBtn:active,
-body.web-mode #noBtn:active {
-  background: transparent;
-  transform: none;
-  box-shadow: none;
 }
