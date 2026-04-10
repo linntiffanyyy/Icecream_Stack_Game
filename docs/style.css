@@ -254,7 +254,7 @@ body.web-mode #titlebar {
 
 body.web-mode #game-over {
   position: fixed;
-  top: calc(50% + 10px);
+  top: calc(50% + 22px);
   left: 50%;
   right: auto;
   bottom: auto;
@@ -263,7 +263,7 @@ body.web-mode #game-over {
   padding-top: 68px;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  background: url('./assets/Endscreen.png') center 26px / cover no-repeat;
+  background: url('./assets/Endscreen.png') center 10px / cover no-repeat;
   background-color: rgba(0, 0, 0, 0.35);
 }
 
