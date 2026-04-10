@@ -242,7 +242,7 @@ body.web-mode #titlebar {
   align-items: flex-start;
   justify-content: center;
   padding-top: 58px;
-  background: url('./assets/Endscreen.png') center 17px / contain no-repeat;
+  background: url('./assets/Endscreen.png') center 17px / 340px auto no-repeat;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   -webkit-app-region: no-drag;
@@ -300,13 +300,13 @@ body.web-mode #titlebar {
 
 #yesBtn {
   position: absolute;
-  bottom: 140px;
+  bottom: 150px;
   left: 100px;
 }
 
 #noBtn {
   position: absolute;
-  bottom: 140px;
+  bottom: 150px;
   right: 100px;
 }
 
