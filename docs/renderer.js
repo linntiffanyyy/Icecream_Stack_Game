@@ -432,6 +432,10 @@ function attemptJump() {
   }
 }
 
+function isInteractiveTarget(target) {
+  return target instanceof Element && !!target.closest('button');
+}
+
 // input
 window.addEventListener('keydown', (e) => {
   if (e.code === 'Space') {
@@ -441,9 +445,14 @@ window.addEventListener('keydown', (e) => {
 });
 
 if (document.body.classList.contains('web-mode')) {
-  window.addEventListener('pointerdown', (e) => {
-    const interactiveTarget = e.target.closest('button');
-    if (interactiveTarget) return;
+  window.addEventListener('touchstart', (e) => {
+    if (isInteractiveTarget(e.target)) return;
+    e.preventDefault();
+    attemptJump();
+  }, { passive: false });
+
+  window.addEventListener('click', (e) => {
+    if (isInteractiveTarget(e.target)) return;
     attemptJump();
   });
 }
