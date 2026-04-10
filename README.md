@@ -34,7 +34,3 @@ Upload the built installer files from `dist/` to GitHub Releases:
 - Windows: `.exe`
 - macOS: `.dmg`
 
-## Notes
-
-- Windows builds are created on Windows.
-- macOS builds are usually created on a Mac.
