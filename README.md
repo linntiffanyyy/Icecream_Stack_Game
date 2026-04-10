@@ -15,5 +15,5 @@ Go to the GitHub Releases section of this repo and download the version made for
 
 Then open the downloaded file and install the game.
 
-## Also created a webpage
+## Also deployed a webpage
 https://linntiffanyyy.github.io/Icecream_Stack_Game/
